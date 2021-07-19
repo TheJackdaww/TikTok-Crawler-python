@@ -3,7 +3,7 @@ import re
 import os
 import csv
 import time
-def string_manipulation(a):#Tiktok: special characters in the jitter text
+def string_clean(a):#Tiktok: special characters in the jitter text
     m=''
     f1=open('special.csv','w')
     wf=csv.writer(f1)
@@ -46,12 +46,12 @@ for i in range(1,100):
         if video_id in videoidlist:
             continue
         videoidlist.append(video_id)
-        video_desc=string_manipulation(i['desc'])
+        video_desc=string_clean(i['desc'])
         author_id=i['author']['id']
         author_name=i['author']['nickname']
-        author_name=string_manipulation(author_name)
+        author_name=string_clean(author_name)
         author_diggCount=i['authorStats']['diggCount']
-        author_signature=string_manipulation(i['author']['signature'])
+        author_signature=string_clean(i['author']['signature'])
         author_followerCount=i['authorStats']['followerCount']
         author_followingCount=i['authorStats']['followingCount']
         author_heartCount=i['authorStats']['heartCount']
