@@ -7,4 +7,4 @@ The max number of video it could crawl in one loop is under 30, I set the loop t
 PLEASE check the design document for more information. 
 
 
-I also did the data analysis based on the data I got
+
